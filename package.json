@@ -2,7 +2,7 @@
   "name": "mern-chat-app",
   "version": "1.0.0",
   "description": "chatting onn",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon backend/server.js",
     "server": "nodemon backend/server.js",
