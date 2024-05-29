@@ -30,23 +30,12 @@ app.use(express.json());
 
 app.use(cors({origin:'*'}));
 
-app.get("/",(req,res)=>{
-    res.send("api is running")
-})
-
-
-
-app.use("/api/user",asyncHandler(userRoutes));
-app.use("/api/chat",chatRoutes);
-app.use("/api/message",messageRoutes);
-app.use(asyncHandler(notFound));
-app.use(asyncHandler(error));
 
 // --------------------------deployment------------------------------
 
 const __dirname1 = path.resolve();
 
-if (process.env.NODE_ENV === "production") {
+if ( NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname1, "/frontend/build")));
 
   app.get("*", (req, res) =>
@@ -59,6 +48,15 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // --------------------------deployment------------------------------
+
+
+app.use("/api/user",asyncHandler(userRoutes));
+app.use("/api/chat",chatRoutes);
+app.use("/api/message",messageRoutes);
+app.use(asyncHandler(notFound));
+app.use(asyncHandler(error));
+
+
 //const Server=app.listen(port, console.log(`server is running on port ${port}`));
 
 
