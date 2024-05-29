@@ -5,11 +5,12 @@ import App from "./App";
 import ChatProvider from "./Context/Chatprovider";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
-import {BrowserRouter } from "react-router-dom";
+import {HashRouter as Router } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <BrowserRouter>
+  <React.StrictMode>
+  <Router>
     <ChatProvider>
     
       <ChakraProvider>
@@ -17,7 +18,8 @@ root.render(
       </ChakraProvider>
     
     </ChatProvider>
-    </BrowserRouter>,
+    </Router>
+    </React.StrictMode>,
   
 );
 
