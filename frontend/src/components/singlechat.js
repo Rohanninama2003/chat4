@@ -26,7 +26,7 @@ import { Button } from "@chakra-ui/react";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./misc/updateGroupchatModel";
 import { ChatState } from "../Context/Chatprovider";
-const ENDPOINT = "http://localhost:4000"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
+const ENDPOINT = "https://chattty-xoi1.onrender.com"; 
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
