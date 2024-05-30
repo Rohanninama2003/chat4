@@ -73,7 +73,7 @@ console.log("hello");
 const io = require("socket.io")(server, {
   pingTimeout: 60000000,
   cors: {
-    origin: "*",
+    origin: "https://chattty-xoi1.onrender.com",
   },
 });
 
